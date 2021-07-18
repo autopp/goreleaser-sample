@@ -20,6 +20,8 @@ import (
 	"github.com/autopp/goreleaser-sample/pkg/hello"
 )
 
+var version = "HEAD"
+
 func main() {
-	fmt.Printf("%s\n", hello.Hello())
+	fmt.Printf("%s\n%s\n", version, hello.Hello())
 }
