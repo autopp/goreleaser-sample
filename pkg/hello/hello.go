@@ -12,14 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package hello
 
-import (
-	"fmt"
-
-	"github.com/autopp/goreleaser-sample/pkg/hello"
-)
-
-func main() {
-	fmt.Printf("%s\n", hello.Hello())
+func Hello() string {
+	return "hello"
 }
