@@ -46,7 +46,12 @@ jobs:
         VERSION=${GITHUB_HEAD_REF#release/}
         if hub release --include-drafts -f "%t:%S%n" | grep -x -F "${VERSION}:draft" >/dev/null; then
           echo Delete existing release
-          hub release delete "${VERSION}"
+          gh release delete "${VERSION}"
+        fi
+        if git fetch origin tag "${VERSION}" >/dev/null; then
+          echo Delete existing tag
+          git tag -d "${VERSION}"
+          git push origin :"${VERSION}"
         fi
         git tag "${VERSION}"
         git push origin "${VERSION}"

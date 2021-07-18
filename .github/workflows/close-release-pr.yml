@@ -35,5 +35,5 @@ jobs:
           hub release edit --draft=false -m "" "${VERSION}"
         else
           echo "Delete ${VERSION}"
-          hub release delete "${VERSION}"
+          gh release delete "${VERSION}"
         fi
