@@ -13,6 +13,8 @@ builds:
       - windows
       - darwin
     main: ./cmd
+release:
+  draft: true
 archives:
   - replacements:
       386: i386
