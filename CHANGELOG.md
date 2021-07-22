@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1
+
+- binary release
+
 ## v0.2.0
 
 - output version
